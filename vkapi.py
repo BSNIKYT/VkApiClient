@@ -54,14 +54,10 @@ def captcha_handler(captcha):
 
 
 session = requests.Session()
-#login, password = '+79684710589', '89253445233Bandit5000'  # Авова
-#login, password = '+79253445233', '89253445233Bandit2000'  # Татьяна Шевченко
-#login, password = '+79684814301', '89253445233Bandit5000'   # Александр Воробышев
-login, password = '+79252054020', '89253445233Bandit5000'
+login, password = '+79###', '###'
 vk_session = vk_api.VkApi(
         login,  #login (+79... или ....@gmail.com)
         password,# passwd
-     #   token = "vk1.a._OufAbMETj3UqiRuWIqrv_ySHN3phBrIyGiwcM041HQOX5lf7KurnJ8NfZR4Y8LYN3FIqM51SLNz6OUsWk6OSL9wKIKF5jRMnV23LFHBiaavbdFsfMQDU09tG_oHj8tVzrtXlgyP0P5LrZRjOfAEccgNmGuC8vRu4lv-Df0J2e3FdZfd-tdgzG20ZNXGIox7",
         auth_handler=auth_handler, # функция для обработки двухфакторной аутентификации
         captcha_handler=captcha_handler)
        
@@ -241,7 +237,7 @@ def menu():
     
     logo()
     print("██████░░░░░░░░░                ░░░░░░░░░██████\n    Вы авторизовались как",res[0]['first_name'],res[0]['last_name'],"\n██████░░░░░░░░░                ░░░░░░░░░██████\n")
-    print("1) Последняя запись со стены.\n2) Информация.\n3) Создать пост\n6) Изменить статус страницы")
+    print("1) Последняя запись со стены.\n2) Информация.\n3) Создать пост\n4) Изменить статус страницы")
     ch = int(input("Введите номер пункта >>> "))
     if ch  == 1:
      wall_get()
@@ -254,7 +250,7 @@ def menu():
     #  pass
     # elif ch  == 5:
     #   af()
-    elif ch == 6:
+    elif ch == 4:
       set_user_status()
      
 

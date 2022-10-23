@@ -213,7 +213,7 @@ def message_and_pict_on_the_wall():
    logo()     
    upl = vk_api.VkUpload(vk_session)
 #  загрузить картинку и разместить ее на стене
-   photo = upl.photo_wall([input("(Файл должен находиться в директории этой программы)\nВведите имя изображения и расширением >>>")])
+   photo = upl.photo_wall([input("(Файл должен находиться в директории этой программы)\nВведите имя изображения с его расширением >>>")])
    vk_photo_id = f"photo{photo[0]['owner_id']}_{photo[0]['id']}"
    api.wall.post(message="Загрузка картинки", attachments=[vk_photo_id])
    try:
